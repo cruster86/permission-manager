@@ -5,12 +5,14 @@
 replicaCount: 1
 
 image:
-  repository: quay.io/sighup/permission-manager
+  repository: registry.sirius.online/infra/permission-manager
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "v1.9.0"
+  tag: "v1.9.1"
 
-imagePullSecrets: []
+imagePullSecrets:
+  - name: infra-registry
+
 nameOverride: ""
 fullnameOverride: ""
 

@@ -1,0 +1,13 @@
+stages:
+  - build_push
+
+prepare_image:
+  stage: build_push
+  when: manual
+  tags:
+    - robot
+  script:
+    - set -x
+    - docker login "${CI_REGISTRY}" -u "${CI_REGISTRY_USER}" -p "${CI_REGISTRY_PASSWORD}"
+    - docker build --no-cache -t registry.sirius.online/infra/permission-manager:v1.9.1 ./builder
+    - docker push registry.sirius.online/infra/permission-manager:v1.9.1
