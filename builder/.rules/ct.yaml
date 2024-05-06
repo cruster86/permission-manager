@@ -1,0 +1,8 @@
+---
+remote: origin
+target-branch: main
+chart-dirs:
+  - helm_chart
+chart-repos:
+  - stable=https://sighupio.github.io/permission-manager
+helm-extra-args: --timeout 600s

@@ -1,0 +1,23 @@
+permission-manager
+e2e-test/data/kubeconfigs
+node_modules
+e2e-test/package-lock.json
+dist
+test.*
+.DS_Store
+chore.sh
+.kubeconfig
+tmp
+.envrc
+static/build
+
+.vscode/
+
+.e2e/
+# Certificate files
+development/certs/*
+permission-manager.dev-tls.yaml
+wildcard.permission-manager.dev-tls.yaml
+
+
+e2e-test/ui/data/kubeconfigs/
